@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Infosite</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+
+    <header>
+        <h1><a href="index.html">Broken Access Control</a></h1>
+        <nav>
+            <ul>
+                <li><a href="bacb.html">BAC</a></li>
+                <li><a href="irl.html">IRL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hgdpr">
+        <h1>BAC</h1>
+        <p class="hvid">Broken Access Control</p>
+    </div>
+      
+    <div class="content">
+        <div class="info">
+            <h2>Hvad er <b>B</b>roken <b>A</b>ccess <b>C</b>ontrol (BAC)</h2>
+            <br>
+            <p>
+                Når fejlkonfigurationer af tilladelser giver angribere adgang til eller ændrer data/filer/konti
+                som de ikke bør have adgang til.
+            </p>
+        </div>
+        <div class="info">
+            <h2>Hvornår sker det</h2>
+            <br>
+            <p>
+                Brugere har forskellige adgangs tilladelser, baseret på deres tildelte rettigheder, som ved en fejl kan konfigureres forkert.<br>
+                <li class="indryk"></li>Evnen til at omgå adgangskontrol checks via URL eller HTML manipulation, ændring af det interne programs tilstand eller ved hjælp af brugerdefineret angrebsværktøjer.<br><br>
+                <li class="indryk"></li>Sårbarhed i forbindelse med rettighedseskalering, som gør det muligt for en bruger med lavt privilegerede rettigheder at udføre handlinger, der skal reserveres til brugere med højere rettigheder.<br><br>
+                <li class="indryk"></li>Metadata manipulation. Dette omfatter vektorer såsom manipulation med adgangkontrol tokens såsom JWTs eller cookies.<br><br>
+                <li class="indryk"></li><b>C</b>ross-<b>O</b>rigin <b>R</b>esource <b>S</b>haring fejlkonfigurationer. <a href="https://blog.detectify.com/2018/04/26/cors-misconfigurations-explained/">(CORS)</a>
+            </p>
+        </div>
+    
+        <div class="info">
+            <h2>Hvordan mindkser man Broken Access Control</h2>
+            <br>
+            <p>Der er en regel man skal have i baghovedet:</p>
+                <p>Medmindre ressourcerne skal være offentligt tilgængelige, skal brugerne nægte at få adgang til dem.</p>
+                <p>Dette lettere sagt end gjort, især i betragtning af listen over forskellige angreb vektorer præsenteret ovenfor.<br> 
+                   Af denne grund er der nogle andre henvisninger til at afbøde eventuelle problemer:</p><br>
+                <li class="indryk"></li>Minimere implementeringen af CORS<br><br>
+                <li class="indryk"></li>Sørge for at filmetadata og sikkerhedskopierede filer ikke er tilgøngelige via serverens rodmappe<br><br>
+                <li class="indryk"></li>Logaktivitet for adgang til relevante filer for at dokumentere og identificere eventuelle sårbarheder på din egen server.<br><br>
+                <li class="indryk"></li>Pålægge hastighedsbegrænsende adgang til API og kontrol adgang for at reducere potentielle skade fra automatiserede angrebsværktøjer.<br><br>
+                <li class="indryk"></li>All relevant access tokens should be invalidated server-side when a user logs out.<br><br>
+
+
+        </div>
+    </div>
+
+<footer>
+</footer>
+
+</body>
+    
+</html>
